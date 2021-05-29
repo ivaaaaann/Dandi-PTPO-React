@@ -1,0 +1,87 @@
+.ranking-main-content {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+}
+.ranking-bar {
+  width: 90%;
+  height: auto;
+  margin: 10px auto;
+}
+.ranking-bar-title-box {
+  width: auto;
+  height: 100px;
+  border: 3px solid #faa860;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #faa860;
+  display: flex;
+}
+.ranking-bar-title {
+  color: white;
+  font-size: 86px;
+}
+.ranking-bar-title-ranking-item {
+  width: 100px;
+  height: auto;
+}
+.ranking-bar-classification {
+  width: auto;
+  height: 50px;
+  border: 3px solid #faa860;
+  margin-top: 10px;
+  display: flex;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.ranking-bar-classification-ranking {
+  width: 100px;
+  height: auto;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #faa860;
+}
+.ranking-bar-classification-name-box {
+  width: 300px;
+  height: auto;
+  margin-left: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-classification-name {
+  width: auto;
+  height: auto;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 30px;
+}
+.ranking-bar-classification-content-name-box {
+  width: 400px;
+  height: auto;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-classification-content-name {
+  width: auto;
+  height: auto;
+  font-size: 25px;
+}
+.ranking-bar-classification-point-box {
+  width: 360px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-classification-point {
+  font-size: 25px;
+  width: auto;
+  height: auto;
+}

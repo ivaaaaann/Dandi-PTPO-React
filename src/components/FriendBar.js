@@ -3,8 +3,8 @@ import "./FriendBar.css";
 
 function FriendBar() {
   return (
-    <div className="right-bar-container">
-      <div className="right-bar-title font-style">Friends</div>
+    <div className="friendBar-container">
+      <div className="friendBar-title font-style">Friends</div>
       <hr width="auto" color="#faa860" size="2" />
     </div>
   );

@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import MainLogo from "../img/logo.png";
-import ProFileImg from "../img/ex-profile.jpg";
+import ProFileImg from "../img/profile.svg";
+import SettingImg from "../img/settings.png";
+import SaveListImg from "../img/save-list.png";
+import LogOutImg from "../img/logout.png";
 
 function Header() {
   return (
@@ -39,12 +42,25 @@ function Header() {
           </div>
           <div className="dropdown">
             <div className="header-profile">
-              <img
-                src={ProFileImg}
-                titla="profile"
-                alt="profile"
-                className="header-profile-img"
-              />
+              <img src="" className="header-profile-img" />
+            </div>
+            <div className="dropdown-item dropdown-item-profile font-style">
+              <Link to="/myProfile" className="profile-item">
+                <img src={ProFileImg} className="profile-item-img" />
+                <div className="profile-item-name">프로필</div>
+              </Link>
+              <Link to="">
+                <img src={SaveListImg} className="profile-item-img" />
+                <div className="profile-item-name">저장목록</div>
+              </Link>
+              <Link to="">
+                <img src={SettingImg} className="profile-item-img" />
+                <div className="profile-item-name">설정</div>
+              </Link>
+              <Link to="">
+                <img src={LogOutImg} className="profile-item-img" />
+                <div className="profile-item-name">로그아웃</div>
+              </Link>
             </div>
           </div>
         </div>

@@ -124,3 +124,14 @@
   border-radius: 30px;
   outline: none;
 }
+.profile-item-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-item-img {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import { HashRouter, Route } from "react-router-dom";
-import Header from "./components/Header";
 import "./App.css";
+import Header from "./components/Header";
 import FriendBar from "./components/FriendBar";
+import MyProfileBar from "./components/MyProfile";
 import Rank from "./routes/Rank";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <Route path="/" exact={true} component={FriendBar} />
       <Route path="/rank" component={Rank} />
+      <Route path="/myProfile" component={MyProfileBar} />
     </HashRouter>
   );
 }

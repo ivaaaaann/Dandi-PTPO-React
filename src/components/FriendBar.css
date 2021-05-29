@@ -1,4 +1,4 @@
-.right-bar-container {
+.friendBar-container {
   width: 400px;
   height: 900px;
   border: 2px solid #faa860;
@@ -6,10 +6,10 @@
   margin-left: auto;
   box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
     0 1px 3px -1px rgba(0, 0, 0, 0.3);
-  margin-top: 10px;
+  margin-top: 30px;
   margin-right: 40px;
 }
-.right-bar-title {
+.friendBar-title {
   margin-top: 10px;
   font-size: 40px;
   margin-left: 10px;

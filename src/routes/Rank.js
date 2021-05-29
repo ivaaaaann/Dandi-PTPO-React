@@ -1,30 +1,32 @@
-import Recat from "react";
+import React from "react";
 import "./Rank.css";
 import RankImg from "../img/ranking-item.png";
 
 function Rank() {
   return (
     <section id="ranking-main-content">
-      <div class="ranking-main-content">
-        <div class="ranking-bar">
-          <div class="ranking-bar-title-box">
-            <img src={RankImg} class="ranking-bar-title-ranking-item" />
-            <div class="ranking-bar-title font-style">랭킹</div>
+      <div className="ranking-main-content">
+        <div className="ranking-bar">
+          <div className="ranking-bar-title-box">
+            <img src={RankImg} className="ranking-bar-title-ranking-item" />
+            <div className="ranking-bar-title font-style">랭킹</div>
           </div>
-          <div class="ranking-bar-classification">
-            <div class="ranking-bar-classification-ranking font-style">
+          <div className="ranking-bar-classification">
+            <div className="ranking-bar-classification-ranking font-style">
               순위
             </div>
-            <div class="ranking-bar-classification-name-box">
-              <div class="ranking-bar-classification-name font-style">이름</div>
+            <div className="ranking-bar-classification-name-box">
+              <div className="ranking-bar-classification-name font-style">
+                이름
+              </div>
             </div>
-            <div class="ranking-bar-classification-content-name-box">
-              <div class="ranking-bar-classification-content-name font-style">
+            <div className="ranking-bar-classification-content-name-box">
+              <div className="ranking-bar-classification-content-name font-style">
                 게시물 이름
               </div>
             </div>
-            <div class="ranking-bar-classification-point-box">
-              <div class="ranking-bar-classification-point font-style">
+            <div className="ranking-bar-classification-point-box">
+              <div className="ranking-bar-classification-point font-style">
                 하트 수
               </div>
             </div>

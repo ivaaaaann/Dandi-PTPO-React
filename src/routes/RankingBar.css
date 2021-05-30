@@ -1,0 +1,84 @@
+.ranking-bar-ranking-item {
+  width: auto;
+  height: 100px;
+  border: 3px solid #faa860;
+  margin: 10px 0px;
+  border-radius: 0px;
+  display: flex;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.ranking-bar-ranking-item-title {
+  width: 100px;
+  height: auto;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #faa860;
+}
+
+.ranking-bar-ranking-item-profile {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #faa860;
+  border-radius: 50px;
+  margin: auto 10px;
+}
+
+.ranking-bar-ranking-item-name {
+  width: auto;
+  height: auto;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 30px;
+}
+
+.ranking-bar-ranking-item-name-box {
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-ranking-item-content-name-box {
+  width: 400px;
+  height: auto;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-ranking-item-content-name {
+  width: auto;
+  height: auto;
+  font-size: 40px;
+}
+.ranking-bar-ranking-item-point-box {
+  width: 360px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-ranking-item-point {
+  font-size: 40px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-bar-ranking-item-point::before {
+  background: url("../img/ranking-heart.png");
+  background-size: 100%;
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+}

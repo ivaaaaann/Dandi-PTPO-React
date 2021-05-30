@@ -1,13 +1,15 @@
 .friendBar-container {
   width: 400px;
-  height: 900px;
+  height: 560px;
   border: 2px solid #faa860;
   border-radius: 20px;
   margin-left: auto;
   box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
     0 1px 3px -1px rgba(0, 0, 0, 0.3);
-  margin-top: 30px;
+  margin-top: 110px;
   margin-right: 40px;
+  left: 70%;
+  position: fixed;
 }
 .friendBar-title {
   margin-top: 10px;

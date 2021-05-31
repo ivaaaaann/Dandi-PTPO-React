@@ -6,10 +6,10 @@
   margin-left: auto;
   box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
     0 1px 3px -1px rgba(0, 0, 0, 0.3);
-  margin-top: 110px;
+  margin-top: 10px;
   margin-right: 40px;
   left: 70%;
-  position: fixed;
+  /* position: fixed; */
 }
 .friendBar-title {
   margin-top: 10px;

@@ -2,20 +2,16 @@ import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import FriendBar from "./components/FriendBar";
 import MyProfileBar from "./components/MyProfile";
-import Rank from "./components/Rank";
-import FeedBar from "./components/FeedBar";
-import RankingBar from "./routes/RankingBar";
+import RankContainer from "./components/RankContainer";
+import MainContentContainer from "./components/MainContentContainer";
 
 function App() {
   return (
     <HashRouter>
       <Header />
-      <Route path="/" exact={true} component={FriendBar} />
-      <Route path="/" exact={true} component={FeedBar} />
-      <Route path="/rank" component={Rank} />
-      <Route path="/rank" component={RankingBar} />
+      <Route path="/" exact={true} component={MainContentContainer} />
+      <Route path="/rank" component={RankContainer} />
       <Route path="/myProfile" component={MyProfileBar} />
     </HashRouter>
   );

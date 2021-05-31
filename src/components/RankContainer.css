@@ -1,0 +1,10 @@
+.ranking-main-content {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+}
+.ranking-bar {
+  width: 90%;
+  height: auto;
+  margin: 10px auto;
+}

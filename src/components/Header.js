@@ -57,7 +57,7 @@ function Header() {
                 <img src={SettingImg} className="profile-item-img" />
                 <div className="profile-item-name">설정</div>
               </Link>
-              <Link to="">
+              <Link to="/login">
                 <img src={LogOutImg} className="profile-item-img" />
                 <div className="profile-item-name">로그아웃</div>
               </Link>

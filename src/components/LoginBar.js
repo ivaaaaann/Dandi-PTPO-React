@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginBar.css";
 import { Link } from "react-router-dom";
-import SignupBar from "./SignupBar";
+import axios from "axios";
 
 function LoginBar() {
+  function passwordExpressBtn() {
+    document.getElementById("passwordbox").type =
+      document.getElementById("passwordbox").type == "password"
+        ? "text"
+        : "password";
+  }
+
+  const [userId, setUserId] = useState("");
+  const [userPw, setUserPw] = useState("");
+
+  useEffect(() => {
+    console.log(userId);
+    console.log(userPw);
+  }, [userId, userPw]);
+
+  const onChangeUserId = (event) => {
+    setUserId(event.target.value);
+  };
+
+  const onChangeUserPW = (event) => {
+    setUserPw(event.target.value);
+  };
+
+  const onClickLogin = async () => {
+    const userInfo = {
+      id: userId,
+      pw: userPw,
+    };
+    const { data } = await axios.post(
+      "http://localhost:8888/auth/login",
+      userInfo
+    );
+  };
+
   return (
     <section id="login-bar">
       <div className="login-bar">
@@ -16,6 +50,7 @@ function LoginBar() {
             className="user-id-box"
             name="id"
             placeholder="아이디를 입력해주세요"
+            onChange={onChangeUserId}
           />
           <div className="user-password-box-text font-style">비밀번호</div>
           <div className="login-bar-password-bar-wrap">
@@ -25,8 +60,12 @@ function LoginBar() {
               id="passwordbox"
               name="pw"
               placeholder="비밀번호를 입력해주세요"
+              onChange={onChangeUserPW}
             />
-            <button className="login-bar-password-express-btn font-style">
+            <button
+              className="login-bar-password-express-btn font-style"
+              onClick={passwordExpressBtn}
+            >
               확인
             </button>
           </div>
@@ -39,6 +78,7 @@ function LoginBar() {
                 type="checkbox"
                 name="checkbox"
                 className="login-continue-checkbox"
+                onClick={onClickLogin}
               />
               <div className="login-continue-checkbox-text font-style">
                 로그인 상태 유지

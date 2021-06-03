@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./LoginBar.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { CookiesProvider } from "react-cookie";
 
 function LoginBar() {
   function passwordExpressBtn() {
@@ -14,10 +15,10 @@ function LoginBar() {
   const [userId, setUserId] = useState("");
   const [userPw, setUserPw] = useState("");
 
-  useEffect(() => {
-    console.log(userId);
-    console.log(userPw);
-  }, [userId, userPw]);
+  // useEffect(() => {
+  //   console.log(userId);
+  //   console.log(userPw);
+  // }, [userId, userPw]);
 
   const onChangeUserId = (event) => {
     setUserId(event.target.value);
@@ -32,10 +33,17 @@ function LoginBar() {
       id: userId,
       pw: userPw,
     };
-    const { data } = await axios.post(
-      "http://localhost:8888/auth/login",
-      userInfo
-    );
+    try {
+      const { data } = await axios.post(
+        "http://localhost:8888/auth/login",
+        userInfo
+      );
+      console.log(data);
+      return data;
+    } catch (err) {
+      console.log(err.response);
+      window.alert("비밀번호 또는 아이디가 잘못 되었습니다.");
+    }
   };
 
   return (
@@ -69,7 +77,11 @@ function LoginBar() {
               확인
             </button>
           </div>
-          <button type="submit" className="login-sumbit-button">
+          <button
+            type="submit"
+            className="login-sumbit-button"
+            onClick={onClickLogin}
+          >
             <div className="login-sumbit-button-text font-style">로그인</div>
           </button>
           <div className="continueLogin-signUp-wrap">
@@ -78,7 +90,6 @@ function LoginBar() {
                 type="checkbox"
                 name="checkbox"
                 className="login-continue-checkbox"
-                onClick={onClickLogin}
               />
               <div className="login-continue-checkbox-text font-style">
                 로그인 상태 유지
